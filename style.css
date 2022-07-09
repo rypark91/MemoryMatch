@@ -1,0 +1,66 @@
+body{
+    background: black;
+}
+h1,p,h2{
+    text-align: center;
+    color: white;
+}
+h2{
+    visibility: hidden;
+}
+
+#buttons{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+button{
+    background-color: white;
+}
+.table{
+    max-width: 700px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    margin: 0 auto;
+    border: 3px solid black;
+    background-color: yellow;
+}
+.card{
+    background: black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 4px 4px;
+    align-self: center;
+    justify-self: center;
+}
+@keyframes front{
+ 50%{
+    width: 0;
+ }
+ 100%{
+    width: 100px;
+ }
+}
+.flip-front{
+    animation-name: front;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@media(max-width: 500px){
+    .card{
+        width: 50px;
+        height: 50px;
+    }
+    @keyframes front{
+        50%{
+            width: 0;
+         }
+         100%{
+            width: 50px;
+         }
+    }
+
+}
